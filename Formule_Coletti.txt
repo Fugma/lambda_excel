@@ -1,1 +1,5 @@
-
+// see video: https://youtu.be/P8knGhzV7uk
+ListTable = LAMBDA(array,
+        LET(one,TAKE(array,,1),two,TAKE(array,,-1),
+        list,UNIQUE(one),
+        HSTACK(list,BYROW(list,LAMBDA(x,TEXTJOIN(", ",TRUE,FILTER(two,one=x)))))));
